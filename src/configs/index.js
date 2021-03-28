@@ -13,5 +13,6 @@ const config = {
   enableCircuitBreaker: process.env.ENABLE_CIRCUIT_BREAKER || 1,
   circuitBreakerDelay: process.env.CIRCUIT_BREAKER_DELAY || 25,
   environment: process.env.NODE_ENV || 'development',
+  serverBaseUrl: process.env.baseUrl || 'https://manator-api-br-rn-challenge.herokuapp.com'
 };
 export default config;

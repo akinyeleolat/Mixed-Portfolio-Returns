@@ -55,19 +55,15 @@ class UserServices {
    * @returns {object} user
    */
   async getUserById(userId) {
-    try {
-      const user = await this.UserModel.findByPk(userId);
+    const user = await this.UserModel.findByPk(userId);
 
-      if (!user) {
-        throw new Error('Data Error', 404, 'User does not exist');
-      }
-      return {
-        success: true,
-        data: user
-      };
-    } catch (error) {
-      return error;
+    if (!user) {
+      throw new Error('Data Error', 404, 'User does not exist');
     }
+    return {
+      success: true,
+      data: user
+    };
   }
 }
 

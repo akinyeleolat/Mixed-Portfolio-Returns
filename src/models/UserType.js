@@ -26,11 +26,8 @@ const userType = (sequelize, DataTypes) => {
     }
   });
 
+  // eslint-disable-next-line no-unused-vars
   UserType.associate = (models) => {
-    UserType.hasMany(models.User, {
-      foreignKey: 'userTypeId',
-      as: 'userList'
-    });
   };
   return UserType;
 };

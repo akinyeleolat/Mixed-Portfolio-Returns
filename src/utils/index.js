@@ -1,6 +1,8 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import Validator from 'validatorjs';
+import got from 'got';
+import envConfig from '../configs';
 
 export const uuidFormat = 'regex:/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[34][0-9a-fA-F]{3}-[89ab][0-9a-fA-F]{3}-[0-9a-fA-F]{12}/';
 
@@ -131,4 +133,15 @@ export const toLowerCaseAndTrim = (inputObject) => {
     formattedObject[key] = value.toString().replace(/\s/g, '').toLowerCase();
   });
   return formattedObject;
+};
+
+
+export const serviceCall = async (endpoint) => {
+  try {
+    const url = `${envConfig.serverBaseUrl}/${endpoint}`;
+    const response = await got(url, { json: true });
+    return response.body;
+  } catch (error) {
+    throw new Error(error.response);
+  }
 };
