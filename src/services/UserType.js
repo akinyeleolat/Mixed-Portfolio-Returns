@@ -3,13 +3,13 @@ import AbstractClass from './AbstractClass';
 
 const { UserType } = model;
 /**
- * @class SubjectServices
+ * @class UserTpeServices
  * @extends {AbstractClass}
  */
 class UserTypeServices extends AbstractClass {
   /**
    * initiate
-   * @param {*} Subject model
+   * @param {*} Usertype model
    */
   constructor() {
     super();

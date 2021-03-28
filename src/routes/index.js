@@ -1,4 +1,5 @@
 import routesList from './v1';
+import logger from '../services/Logger';
 
 const routes = (app) => {
   app.use((req, res, next) => {
@@ -15,9 +16,22 @@ const routes = (app) => {
     res.removeHeader('X-Powered-By');
     next();
   });
-  // you can do versioning
+
+  app.all('/test', (req, res) => {
+    res.send({ message: 'Hello from templates!' });
+  });
+
   const version1 = '/v1';
   app.use(version1, routesList);
+
+  app.use((err, req, res, next) => {
+    if (err.name === 'UnauthorizedError') {
+      res.status(err.status).send({ message: err.message });
+      logger.error(err);
+      return;
+    }
+    next();
+  });
 };
 
 export default routes;

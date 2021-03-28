@@ -38,11 +38,6 @@ const user = (sequelize, DataTypes) => {
 
   // eslint-disable-next-line no-unused-vars
   User.associate = (models) => {
-    // User.hasMany(models.Booking, {
-    //   foreignKey: 'userId',
-    //   target: 'id',
-    //   onDelete: 'CASCADE'
-    // });
   };
   return User;
 };

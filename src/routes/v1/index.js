@@ -1,20 +1,21 @@
 import { Router } from 'express';
 import userRoute from './user';
 import userTypeRoute from './usertype';
+import performanceRoute from './performance';
+import { verifyUser } from '../../middlewares/validations/user';
 
 const router = Router();
 
 const routeList = [
-  { path: '/auth', route: userRoute },
   { path: '/usertype', route: userTypeRoute },
+  { path: '/performance', route: performanceRoute }
 ];
+router.use('/auth', userRoute);
+
+router.use('*', verifyUser);
 
 routeList.forEach((route) => {
   router.use(route.path, route.route);
-});
-
-router.all('/', (req, res) => {
-  res.send({ message: 'Hello from templates!' });
 });
 
 export default router;
