@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/akinyeleolat/nodejs-starter.svg?token=cwN91MVvrFcs3q4Up8px&branch=main)](https://travis-ci.com/akinyeleolat/nodejs-starter)
+[![Build Status](https://travis-ci.com/akinyeleolat/Mixed-Portfolio-Returns.svg?branch=main)](https://travis-ci.com/akinyeleolat/Mixed-Portfolio-Returns)
 # mixedPlanReturn
 Get mixed plan return
 
