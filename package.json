@@ -1,5 +1,5 @@
 {
-  "name": "carbooking",
+  "name": "mixedplan",
   "version": "1.0.0",
   "description": "mixed investment returns",
   "main": "index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akinyeleolat/carBooking.git"
+    "url": "git+https://github.com/akinyeleolat/Mixed-Portfolio-Returns.git"
   },
   "keywords": [
     "investment",
@@ -31,9 +31,9 @@
   "author": "Oluwatosin Akinyele",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/akinyeleolat/carBooking/issues"
+    "url": "https://github.com/akinyeleolat/Mixed-Portfolio-Returns/issues"
   },
-  "homepage": "https://github.com/akinyeleolat/carBooking#readme",
+  "homepage": "https://github.com/akinyeleolat/Mixed-Portfolio-Returns#readme",
   "dependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
