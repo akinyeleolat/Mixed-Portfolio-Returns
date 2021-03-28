@@ -4,7 +4,7 @@ export const newUser = {
 };
 
 export const goodUserData = {
-  email: 'testing@carbooking.com',
+  email: 'testing@mixedplan.com',
   password: 'testing123'
 };
 
